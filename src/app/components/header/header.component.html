@@ -1,0 +1,48 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item">
+      <img src="https://www.oxyguard.dk/dist/images/system/logo.svg" width="115" height="30">
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu" role="navigation">
+    <div class="navbar-start">
+      <a class="navbar-item" [routerLink]="'/dashboard'">
+        Home
+      </a>
+
+      <a class="navbar-item">
+        Documentation
+      </a>
+    </div>
+
+  <div class="navbar-end">
+    <div *ngIf="user" style="padding-right: 20px;">
+      <div class="navbar-item has-dropdown is-hoverable" >
+        <span>
+          Hello
+          {{user.results[0].name.title}}
+          {{user.results[0].name.last}}
+        </span>
+        <div class="navbar-item">
+          <img src={{user.results[0].picture.thumbnail}}>
+        </div>
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            edit account
+          </a>
+          <hr class="navbar-divider">
+          <div class="navbar-item">
+           log out
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</nav>

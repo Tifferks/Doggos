@@ -1,0 +1,17 @@
+<div class="container" style="padding-top: 10px;">
+  <div class="columns">
+    <div class="column" *ngFor="let dog of dogCollection">
+  <div class="card" >
+    <div class="card-image">
+      <figure class="image is-4by5">
+        <img src={{dog.url}}>
+      </figure>
+    </div>
+    <div class="content">
+      size: {{dog.fileSizeBytes}}
+      <br>
+    </div>
+  </div>
+</div>
+</div>
+</div>
